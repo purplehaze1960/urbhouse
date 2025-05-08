@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>URB House Apartments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        .language-selector {
+            margin: 10px;
+            text-align: center;
+        }
+        .language-selector button {
+            margin: 0 5px;
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        .gallery img {
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+        .info {
+            font-size: 1.1em;
+            line-height: 1.6em;
+        }
+        .contact {
+            margin-top: 20px;
+        }
+        .contact img {
+            width: 24px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        .booking-btn {
+            display: inline-block;
+            margin-top: 15px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>URB House Apartments</h1>
+    </header>
+    <div class="language-selector">
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('cz')">Čeština</button>
+        <button onclick="setLanguage('ru')">Русский</button>
+    </div>
+    <div class="container">
+        <div class="gallery">
+            <img src="3.png" alt="Apartment photo 1">
+            <img src="5.png" alt="Apartment photo 2">
+            <img src="6.png" alt="Apartment photo 3">
+        </div>
+        <div class="info" id="text">
+        </div>
+        <div class="contact">
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp icon"> +420 776 463 540</p>
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram icon"> +420 776 463 540</p>
+            <p>Email: info@maptel.cz</p>
+            <a href="https://your-booking-link.com" class="booking-btn" target="_blank">Book Now</a>
+        </div>
+    </div>
+    <script>
+        const texts = {
+            en: `
+                <p><strong>1kk</strong> – 15,000 CZK/month</p>
+                <p><strong>2kk</strong> – 23,000 CZK/month</p>
+                <p><strong>3kk</strong> – 30,000 CZK/month</p>
+                <p><strong>2+1</strong> – 21,000 CZK/month</p>
+            `,
+            cz: `
+                <p><strong>1kk</strong> – 15 000 Kč/měsíc</p>
+                <p><strong>2kk</strong> – 23 000 Kč/měsíc</p>
+                <p><strong>3kk</strong> – 30 000 Kč/měsíc</p>
+                <p><strong>2+1</strong> – 21 000 Kč/měsíc</p>
+            `,
+            ru: `
+                <p><strong>1кк</strong> – 15 000 крон/месяц</p>
+                <p><strong>2кк</strong> – 23 000 крон/месяц</p>
+                <p><strong>3кк</strong> – 30 000 крон/месяц</p>
+                <p><strong>2+1</strong> – 21 000 крон/месяц</p>
+            `
+        };
+
+        function setLanguage(lang) {
+            document.getElementById('text').innerHTML = texts[lang];
+        }
+
+        // Default language
+        setLanguage('en');
+    </script>
+</body>
+</html>
